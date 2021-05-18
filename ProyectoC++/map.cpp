@@ -8,21 +8,12 @@ void DrawMap(int HeroPosX, int HeroPosY, char GameMap[5][5])
     {
         for (int p = 0; p < 5; p++)
         {
-            if (i != HeroPosX)
+            if (i == HeroPosX & p == HeroPosY)
             {
-                cout << GameMap[i][p];
+                cout << 'H';
             }
             else
-            {
-                if (p != HeroPosY)
-                {
-                    cout << GameMap[i][p];
-                }
-                else
-                {
-                    cout << 'H';
-                }
-            }
+                cout << GameMap[i][p];
         }
         cout << endl;
     }
@@ -49,19 +40,29 @@ int main()
     {
         cin >> Input;
 
-        if (Input == 'd')
+        switch (Input)
         {
-            HeroPosY = HeroPosY +1;
-        }
-        else if (Input == 'a')
-        {
-            HeroPosY = HeroPosY - 1;
-        }
-        else if (Input == 'p')
-        {
+        case 'd':
+            if (HeroPosY < 4)
+                HeroPosY = HeroPosY +1;   
+            break;
+        case 'a':
+            if (HeroPosY > 0)
+                HeroPosY = HeroPosY -1;
+            break;
+        case 'w':
+            if (HeroPosX > 0)
+                HeroPosX = HeroPosX -1;
+            break;
+        case 's':
+            if (HeroPosX < 4)
+                HeroPosX = HeroPosX +1;
+            break;
+        default:
             isGameOver = true;
+            break;
         }
-
         DrawMap(HeroPosX, HeroPosY, GameMap);
+        cout << endl;
     }
 }
