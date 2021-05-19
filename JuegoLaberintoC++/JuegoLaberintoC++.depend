@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1621397869 source:/home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/src/Player.cpp
+	"Player.h"
+	<iostream>
+
+1621397724 /home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/include/Player.h
+
