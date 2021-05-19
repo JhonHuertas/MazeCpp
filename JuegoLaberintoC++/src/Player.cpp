@@ -17,19 +17,19 @@ Player::Player()
      switch(UserImput)
      {
         case 'w':
-                y += 1;
+                x -= 1;
                 cout << "El jugador se mueve arriba" << endl;
             break;
         case 's':
-                y -= 1;
+                x += 1;
                 cout << "El jugador se mueve abajo" << endl;
             break;
         case 'd':
-                x += 1;
+                y += 1;
                 cout << "El jugador se mueve derecha" << endl;
             break;
         case 'a':
-                x -= 1;
+                y -= 1;
                 cout << "El jugador se mueve izquierda" << endl;
             break;
      }

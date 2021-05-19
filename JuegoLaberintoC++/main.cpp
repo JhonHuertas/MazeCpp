@@ -11,6 +11,8 @@ int main()
     GameMap Map;
     Player Hero;
 
+    cout << "Inicia el juego!!!" << endl;
+
     while(isGameOver == false)
     {
         //loop del juego

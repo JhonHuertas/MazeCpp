@@ -8,6 +8,7 @@ class GameMap
     public:
         GameMap();
 
+        MapCell* PlayerCell;
         MapCell cells[15][10];
 
         void Draw();
