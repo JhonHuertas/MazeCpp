@@ -9,7 +9,7 @@ class Player
         void CallInput();
 
     protected:
-
+        int x, y;
     private:
 };
 

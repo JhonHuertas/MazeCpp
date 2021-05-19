@@ -3,5 +3,9 @@
 	"Player.h"
 	<iostream>
 
-1621397724 /home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/include/Player.h
+1621399338 /home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/include/Player.h
+
+1621399245 source:/home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/main.cpp
+	<iostream>
+	"Player.h"
 
