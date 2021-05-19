@@ -8,8 +8,10 @@ class Player
         Player();
         void CallInput();
 
-    protected:
         int x, y;
+
+    protected:
+
     private:
 };
 
