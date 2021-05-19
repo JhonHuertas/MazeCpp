@@ -19,9 +19,7 @@ void SaveLocation(int HeroPosX, int HeroPosY)
         {
             MyFile << "c" << endl;
         }
-
     }
-
     MyFile.close();
 }
 
