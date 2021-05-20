@@ -10,7 +10,10 @@ Player::Player()
 }
  void Player::CallInput()
  {
-     char UserImput = ' ';
+     char UserImput;
+
+     lastX = x;
+     lastY = y;
 
      cin >> UserImput;
 
@@ -32,3 +35,8 @@ Player::Player()
      cout << "Mi jugador esta en la coordenada: x = " << x <<" y = " << y << endl;
  }
 
+void Player::ResetTosafePosition()
+{
+    x = lastX;
+    y = lastY;
+}

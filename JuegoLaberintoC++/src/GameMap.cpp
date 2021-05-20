@@ -22,14 +22,23 @@ void GameMap ::Draw()
 
 }
 
-void GameMap::setPlayerCell(int PlayerY, int PlayerX)
+bool GameMap::setPlayerCell(int PlayerX, int PlayerY)
 {
-    if(PlayerCell != NULL)
+    if(cells[PlayerY][PlayerX].IsBlocked() == false)
     {
-        PlayerCell->id = ' ';
+        if(PlayerCell != NULL)
+        {
+            PlayerCell->id = ' ';
+        }
+        PlayerCell = &cells[PlayerY][PlayerX];
+        PlayerCell->id = '3';
+
+        return true;
     }
-    PlayerCell = &cells[PlayerX][PlayerY];
-    PlayerCell->id = '3';
+    else
+    {
+        return false;
+    }
 }
 
 void GameMap::LoadMapFromFile()

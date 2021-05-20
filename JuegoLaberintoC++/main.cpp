@@ -18,9 +18,16 @@ int main()
         //loop del juego
         Hero.CallInput();
         //Actualizando mapa con coordenadas del heroe
-        Map.setPlayerCell(Hero.x, Hero.y);
-        //Aqui dibujamos el mapa
-        Map.Draw();
+        if (Map.setPlayerCell(Hero.x, Hero.y))
+        {
+            //Aqui dibujamos el mapa
+            Map.Draw();
+        }
+        else
+        {
+            Hero.ResetTosafePosition();
+            Map.Draw();
+        }
     }
 
     return 0;
