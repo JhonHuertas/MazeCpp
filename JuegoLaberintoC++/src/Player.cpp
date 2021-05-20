@@ -17,20 +17,16 @@ Player::Player()
      switch(UserImput)
      {
         case 'w':
-                x -= 1;
-                cout << "El jugador se mueve arriba" << endl;
+                y -= 1;
             break;
         case 's':
-                x += 1;
-                cout << "El jugador se mueve abajo" << endl;
+                y += 1;
             break;
         case 'd':
-                y += 1;
-                cout << "El jugador se mueve derecha" << endl;
+                x += 1;
             break;
         case 'a':
-                y -= 1;
-                cout << "El jugador se mueve izquierda" << endl;
+                x -= 1;
             break;
      }
      cout << "Mi jugador esta en la coordenada: x = " << x <<" y = " << y << endl;

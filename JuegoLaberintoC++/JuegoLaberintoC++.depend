@@ -16,10 +16,10 @@
 1621400321 source:/home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/src/MapCell.cpp
 	"MapCell.h"
 
-1621403872 source:/home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/src/GameMap.cpp
+1621469177 source:/home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/src/GameMap.cpp
 	"GameMap.h"
 	<iostream>
 
-1621403758 /home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/include/GameMap.h
+1621469389 /home/mrcyshu/Documentos/FundaDProg/IntC++/Proyecto/JuegoLaberintoC++/include/GameMap.h
 	"MapCell.h"
 
