@@ -8,6 +8,7 @@ GameMap::GameMap()
 {
     PlayerCell = NULL;
     LoadMapFromFile();
+    isGameOver = false;
 }
 void GameMap ::Draw()
 {
@@ -26,14 +27,23 @@ bool GameMap::setPlayerCell(int PlayerX, int PlayerY)
 {
     if(cells[PlayerY][PlayerX].IsBlocked() == false)
     {
-        if(PlayerCell != NULL)
+        if(cells[PlayerY][PlayerX].id == '$')
         {
-            PlayerCell->id = ' ';
+            DrawVictory();
+            isGameOver = true;
+            return true;
         }
-        PlayerCell = &cells[PlayerY][PlayerX];
-        PlayerCell->id = '3';
+        else
+        {
+            if(PlayerCell != NULL)
+            {
+                PlayerCell->id = ' ';
+            }
+            PlayerCell = &cells[PlayerY][PlayerX];
+            PlayerCell->id = 'H';
 
-        return true;
+            return true;
+        }
     }
     else
     {
@@ -43,7 +53,7 @@ bool GameMap::setPlayerCell(int PlayerX, int PlayerY)
 
 void GameMap::DrawIntro()
 {
-     string line;
+    string line;
     int row = 0;
     ifstream MyFile("Intro.txt");
     if (MyFile.is_open())
@@ -57,6 +67,24 @@ void GameMap::DrawIntro()
     else
     {
         cout << "FATAL ERROR: INTRO COULD NOT BE LOADED" << endl;
+    }
+}
+
+void GameMap::DrawVictory()
+{
+    string line;
+    int row = 0;
+    ifstream MyFile("Victory.txt");
+    if (MyFile.is_open())
+    {
+        while (getline(MyFile, line))
+        {
+            cout << line << endl;
+        }
+    }
+    else
+    {
+        cout << "FATAL ERROR: VICTORY COULD NOT BE LOADED" << endl;
     }
 }
 
@@ -87,3 +115,4 @@ void GameMap::LoadMapFromFile()
         cout << "FATAL ERROR: MAP FILE COULD NOT BE LOADED" << endl;
     }
 }
+
