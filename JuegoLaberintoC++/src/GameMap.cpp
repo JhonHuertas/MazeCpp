@@ -41,18 +41,27 @@ bool GameMap::setPlayerCell(int PlayerX, int PlayerY)
     }
 }
 
-void GameMap::LoadMapFromFile()
+void GameMap::DrawIntro()
 {
-    /*ofstream FileCreated("Map.txt");
-    if (FileCreated.is_open())
+     string line;
+    int row = 0;
+    ifstream MyFile("Intro.txt");
+    if (MyFile.is_open())
     {
-
+        while (getline(MyFile, line))
+        {
+            cout << line << endl;
+        }
+        cin >> line;
     }
     else
     {
-        cout << "FATAL ERROR: MAP FILE COULD NOT BE CREATED" << endl;
-    }*/
+        cout << "FATAL ERROR: INTRO COULD NOT BE LOADED" << endl;
+    }
+}
 
+void GameMap::LoadMapFromFile()
+{
     string line;
     int row = 0;
     ifstream MyFile("Map.txt");

@@ -11,6 +11,7 @@ class GameMap
         MapCell* PlayerCell;
         MapCell cells[15][10];
 
+        void DrawIntro();
         void Draw();
 
         //Funcion que recibe las coordenadas de Player y actualiza el mapa
