@@ -8,6 +8,26 @@ Player::Player()
     x = 1;
     y = 1;
 }
+
+void Player::SaveLocation()
+{
+    ofstream MyFile("GameMapPos.txt");
+    string location = "";
+    if (MyFile.is_open())
+    {
+        MyFile << "Ubicacion actual: " << endl;
+        for (int i = x; i > 0; i--)
+        {
+            MyFile << "r" << endl;
+        }
+        for (int i = y; i > 0; i--)
+        {
+            MyFile << "c" << endl;
+        }
+    }
+    MyFile.close();
+}
+
  void Player::CallInput()
  {
      char UserImput;
@@ -31,8 +51,16 @@ Player::Player()
         case 'a':
                 x -= 1;
             break;
+        case 'r':
+            {
+                x = 1;
+                y = 1;
+            }
+            break;
      }
      cout << "Mi jugador esta en la coordenada: x = " << x <<" y = " << y << endl;
+
+     void SaveLocation();
  }
 
 void Player::ResetTosafePosition()

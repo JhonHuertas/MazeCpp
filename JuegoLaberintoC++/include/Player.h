@@ -8,6 +8,7 @@ class Player
         Player();
         void CallInput();
 
+
         void ResetTosafePosition();
 
         int x, y;
@@ -15,6 +16,7 @@ class Player
         int lastX, lastY;
 
     protected:
+        void SaveLocation();
 
     private:
 };
